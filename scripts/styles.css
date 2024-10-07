@@ -1,0 +1,226 @@
+/* Global Styles */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: center;
+    background-color: #34495e;
+    padding: 1rem;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #f0f0f5;
+    font-size: 1.9rem;
+}
+
+.navbar ul li a:hover {
+    color: #bdc3c7;
+}
+
+/* Staggered Bento Box Layout */
+.staggered-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for better spacing */
+    grid-auto-rows: 200px; /* Set uniform row height */
+    gap: 20px;
+    padding: 20px;
+    margin-top: 100px; /* Add margin to avoid navbar overlap */
+}
+
+.tile {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tile h2 {
+    color: #2c3e50;
+    font-size: 1.8rem;
+}
+
+.tile a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tile:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Tile Layout for Staggering Effect (with no empty spaces) */
+.tile.explore {
+    grid-column: span 2; /* Occupies 2 columns */
+    grid-row: span 2;    /* Occupies 2 rows */
+    background-color: #134B70;
+    color: white;
+}
+
+.explore-title {
+    color: #f0f0f5;
+    font-size: 150px;
+    transition: font-size 0.3s ease, content 0.3s ease; /* Smooth transition effect */
+}
+
+.explore-title:hover {
+    font-size: 80px;
+}
+
+.explore-title:hover::after {
+    content: "HiveBuzz is a platorm created to keep the user upto date about recent events. Check out the News sections for daily news straight from The New York Times, or keep upto date with the Blogs, or add your own Blogs."; /* Text to add when hovering */
+    font-size: 30px;
+    display: inline-block;
+    color: #bdc3c7;
+    margin-left: 10px;
+}
+
+.tile.news {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: #508C9B;
+    color: white;
+}
+.news-title {
+    
+}
+
+.tile.blogs {
+    grid-column: span 1;
+    grid-row: span 2; /* Taller */
+    background-color: #508C9B;
+    color: white;
+}
+
+.tile.contact {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: #508C9B;
+    color: white;
+}
+/* Social Icons in the Contact Tile */
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icon {
+    transform: scale(1.5);
+    transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(3.1); /* Slight zoom effect on hover */
+}
+
+
+.tile.about {
+    grid-column: span 1;
+    grid-row: span 1;
+    background-color: #134B70;
+    color: white;
+}
+
+
+/* Footer */
+footer {
+    background-color: #34495e;
+    padding: 2rem;
+    color: #f0f0f5;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-column {
+    flex: 1;
+    margin: 1rem;
+}
+
+.footer-column h3 {
+    color: #ffffff;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-column ul li a {
+    color: #f0f0f5;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+    color: #bdc3c7;
+}
+
+.footer-column p {
+    margin: 0.5rem 0;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(100%);
+    transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+    filter: invert(80%);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #2c3e50;
+}
+
+.footer-bottom p {
+    color: #bdc3c7;
+    font-size: 0.9rem;
+}
